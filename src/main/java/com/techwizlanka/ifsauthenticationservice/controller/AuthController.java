@@ -3,7 +3,6 @@ package com.techwizlanka.ifsauthenticationservice.controller;
 import com.techwizlanka.ifsauthenticationservice.dto.AuthRequest;
 import com.techwizlanka.ifsauthenticationservice.entity.UserCredential;
 import com.techwizlanka.ifsauthenticationservice.service.AuthenticationService;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -37,7 +36,7 @@ public class AuthController {
         }
     }
 
-    @PostMapping("/validate")
+    @GetMapping("/validate")
     public String validateToken(@RequestParam("token") String token) {
         authenticationService.validateToken(token);
         return "Token is valid";

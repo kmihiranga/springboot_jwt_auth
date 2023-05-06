@@ -1,15 +1,10 @@
 package com.techwizlanka.ifsauthenticationservice.util;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-import lombok.experimental.UtilityClass;
-import org.apache.commons.codec.Decoder;
-import org.apache.commons.codec.digest.HmacUtils;
 import org.springframework.stereotype.Component;
 
-import javax.crypto.spec.SecretKeySpec;
 import java.io.IOException;
 import java.security.Key;
 import java.util.*;
